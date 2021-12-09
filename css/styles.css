@@ -72,20 +72,20 @@ body {
   font-family: "Libre Franklin", sans-serif;
 }
 
-.home-heading {
+.heading {
   position: absolute;
   top: 120px;
   left: 30px;
   color: #037df5;
 }
 
-h1 {
+main h1 {
   font-weight: 600;
   margin: 0;
   font-size: 1.8em;
 }
 
-h2 {
+main h2 {
   color: #037df5;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -95,15 +95,14 @@ h2 {
   font-size: 1.5em;
 }
 
-p {
+main p {
   margin-top: 0;
-  margin-bottom: 15px;
-  color: #037df5;
+  color: #0270de;
   font-weight: 100;
 }
 
 .featured {
-  padding-top: 100px;
+  padding-top: 80px;
   max-width: 300px;
   margin: 0 auto;
 }
@@ -114,15 +113,15 @@ p {
   top: 250px;
 }
 
-.home-main img {
+main img {
   width: 100%;
-  border: solid 2px #ffb259;
 }
 
 .cta {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
+  font-size: 1.1em;
   background-color: #ffb259;
   background-size: cover;
   padding: 10px 70px;
@@ -133,30 +132,31 @@ p {
   margin-bottom: 25px;
 }
 
+.cta-button {
+  text-align: center;
+  margin-top: 15px;
+}
+
 .cta:before {
   content: "";
   padding: 10px;
   background: #fff;
   transform: rotate(45deg);
   position: absolute;
-  height: 60px;
+  height: 70px;
   top: -20px;
-  left: -40px;
+  left: -45px;
   transition: left ease-in-out 1s;
   opacity: 0.3;
 }
 
 .cta:hover::before {
-  left: 250px;
-}
-
-.cta-button {
-  text-align: center;
+  left: 270px;
 }
 
 footer {
   background-color: #f5f5f5;
-  color: #037df5;
+  color: #0270de;
 }
 
 .footer-content {
@@ -168,23 +168,20 @@ footer {
 
 footer h3 {
   margin: 0 0 5px 0;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1em;
 }
 
 footer h4 {
   margin: 8px 0 0 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.8em;
 }
 
 footer p {
   margin: 0;
   font-size: 0.7em;
-}
-
-.footer-address {
-  margin-top: 3px;
+  font-weight: 400;
 }
 
 footer ul {
@@ -199,14 +196,202 @@ footer li {
 
 footer a {
   text-decoration: none;
-  color: #037df5;
-  font-size: 0.8em;
-  font-weight: 300;
+  color: #0270de;
+  font-size: 0.7em;
+  font-weight: 400;
 }
 
 .footer-copyright {
-  font-size: 0.7em;
+  font-size: 0em;
   font-weight: 300;
   text-align: center;
   margin-top: 10px;
+}
+
+/* Home page */
+
+.home-featured {
+  padding-top: 100px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Exhibitions page */
+
+.subheading p {
+  margin: 0;
+}
+
+.popup-text {
+  text-align: left;
+  margin: 0 10px;
+}
+
+.popup-text h3 {
+  color: #0270de;
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.popup-text p {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.popup-text .read-more {
+  display: none;
+}
+
+.read-more {
+  display: none;
+}
+
+.read-more-button {
+  padding: 10px 70px;
+  background-color: #ffb259;
+  border-radius: 10px;
+  content: "Read more";
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.featured-page__content {
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.popup {
+  max-height: 0px;
+  overflow: hidden;
+  margin: 10px 0 30px 0;
+  transition: 0.6s ease-in-out;
+}
+
+.cosmology-check:checked ~ .cosmology-box {
+  max-height: 500px;
+  border: 1px solid #ffb259;
+}
+.robotics-check:checked ~ .robotics-box {
+  max-height: 500px;
+  border: 1px solid #ffb259;
+}
+.evolution-check:checked ~ .evolution-box {
+  max-height: 500px;
+  border: 1px solid #ffb259;
+}
+.biology-check:checked ~ .biology-box {
+  max-height: 500px;
+  border: 1px solid #ffb259;
+}
+
+.read-more ~ .read-more-button::before {
+  content: "Read more";
+}
+
+.read-more:checked ~ .read-more-button::before {
+  content: "Read less";
+}
+
+.featured-page-margin {
+  margin-top: 25px;
+}
+
+/* Events page */
+
+.night-check:checked ~ .night-box {
+  max-height: 500px;
+  border: 1px solid #ffb259;
+}
+
+.metaverse-check:checked ~ .metaverse-box {
+  max-height: 500px;
+  border: 1px solid #ffb259;
+}
+
+.eclipse-check:checked ~ .eclipse-box {
+  max-height: 500px;
+  border: 1px solid #ffb259;
+}
+.dinosaur-check:checked ~ .dinosaur-box {
+  max-height: 500px;
+  border: 1px solid #ffb259;
+}
+
+/* About Us page */
+
+.about-paragraph {
+  margin-bottom: 30px;
+  border: 1px solid #ffb259;
+}
+
+.about-paragraph p {
+  margin: 10px;
+}
+/* Visit page */
+
+.visit-location {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  max-width: 140px;
+  margin-bottom: 20px;
+}
+
+.visit-address {
+  color: #0270de;
+}
+
+.visit-address h4 {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.opening {
+  display: flex;
+  border: 1px solid #ffb259;
+  color: #0270de;
+}
+
+.opening h4 {
+  margin: 10px;
+}
+
+.visit-paragraph {
+  margin: 10px 0 30px 0;
+}
+
+/* Contact page */
+
+.contact-phone {
+  font-size: 3em;
+  color: #ffb259;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.contact-chat {
+  font-size: 3em;
+  color: #ffb259;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.phone-cta {
+  margin: auto 10px;
+}
+
+.chat-cta {
+  margin: auto 10px;
+}
+
+.contact-form {
+  text-align: center;
 }
