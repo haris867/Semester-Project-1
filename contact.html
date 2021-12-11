@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Community Science Museum | Visit</title>
+    <title>Community Science Museum | Contacttest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="contact-body">
       <div class="header">
 <header>
       <div class="logo-container">
@@ -52,14 +52,18 @@
 </ul>
 
 </nav>
-<div class="search-icon">
-<a href="#"><i class="fas fa-search"></i></a>
-</div>
       </div>
       </div>
-    
     </header>
-    <main class="visit-main">
+    <div class="search-container">
+        <input type="checkbox" class="search-checkbox" id="search-id"> 
+        <div class="search-box">   
+        <input type="text" name="search" class="search-field">
+        <input type="submit" value="Search" class="search-button">
+        </div>
+    </div>
+    <label for="search-id" class="search-label"><i class="fas fa-search"></i></label>
+    <main class="contact-main">
         <div class="heading">
 <h1>Contact</h1>
         </div>
@@ -69,18 +73,38 @@
           </div>
           <div class="contact-methods">
               <div class="contact-phone">
-                  <i class="fas fa-phone-alt"></i>
-                  <div class="cta phone-cta"></div>
+                  <input type="checkbox" class="phone-check" id="phone-check">
+                      
+                      <div class="phone-popup">
+                        <h2>Our phone number is:</h2>
+                        <p>22 12 34 56</p>
+                  </div>
+                  <div class="phone-section">
+                    
+                    <label for="phone-check" class="phone-icon"><i class="fas fa-phone-alt"></i></label>
+                    <label for="phone-check" class="cta phone-cta">Call</label>
+                  </div>
               </div>
+
+              
               <div class="contact-chat">
-                  <i class="fas fa-comment-alt"></i>
-                  <div class="cta chat-cta"></div>
+                  <input type="checkbox" class="chat-check" id="chat-check">
+                  <div class="chat-popup">
+                      <h2</h2>
+                        <textarea placeholder="Write.." name="chat-field" class="chat-field" id="chat-field" cols="30" rows="2"></textarea>
+                        <div class="cta chat-cta">Start chat</div>
+                  </div>
+                  <div class="chat-section">
+                        <label for="chat-check" class="chat-icon"><i class="fas fa-comment-alt"></i></label>
+                        <label for="chat-check" class="cta phone-cta">Chat</label>
+                  </div>
               </div>
               
           </div>
           </div>
           <div class="contact-form">
-          <input type="textarea">
+          <textarea placeholder="Write to us.." name="contact-form" class="form-contact" id="contact-form" cols="35" rows="5"></textarea>
+          <div class="cta contact-cta">Submit</div>
       </div>
     </main>
        <footer>

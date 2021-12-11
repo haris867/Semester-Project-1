@@ -44,8 +44,8 @@ nav a:hover {
 
 .hamburger-icon {
   position: absolute;
-  top: 4%;
-  right: 5%;
+  top: 35px;
+  right: 20px;
   font-size: 1.5em;
   color: #fff;
   cursor: pointer;
@@ -63,8 +63,48 @@ nav a:hover {
   color: #fff;
   font-size: 1.3em;
   position: absolute;
-  top: 4.6%;
-  right: 14%;
+  top: 40px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.search-box {
+  display: none;
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 10px;
+  border: solid 1px #ffb259;
+  border-radius: 10px;
+}
+
+.search-button {
+  padding: 10px 70px;
+  color: #4f4f4f;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: #ffb259;
+  border-radius: 10px;
+  border: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.search-field {
+  width: 80%;
+  min-height: 30px;
+  resize: none;
+}
+
+.search-checkbox {
+  display: none;
+}
+
+.search-checkbox:checked ~ .search-box {
+  display: block;
 }
 
 body {
@@ -73,10 +113,11 @@ body {
 }
 
 .heading {
-  position: absolute;
-  top: 120px;
+  position: relative;
+  top: 20px;
   left: 30px;
   color: #037df5;
+  max-width: 300px;
 }
 
 main h1 {
@@ -102,9 +143,13 @@ main p {
 }
 
 .featured {
-  padding-top: 80px;
+  padding-top: 20px;
   max-width: 300px;
   margin: 0 auto;
+}
+
+.featured-page {
+  padding-top: 20px;
 }
 
 .thumbnail-image {
@@ -120,8 +165,9 @@ main img {
 .cta {
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: #4f4f4f;
   font-size: 1.1em;
+  font-weight: 400;
   background-color: #ffb259;
   background-size: cover;
   padding: 10px 70px;
@@ -154,9 +200,62 @@ main img {
   left: 270px;
 }
 
+.popup {
+  max-height: 0px;
+  overflow: hidden;
+  margin: 10px 0 30px 0;
+  transition: 0.6s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.popup-text {
+  text-align: left;
+  margin: 0 10px;
+}
+
+.popup-text h3 {
+  color: #0270de;
+  font-size: 0.8em;
+  margin-top: 8px;
+}
+
+.popup-text p {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.popup-text .read-more {
+  display: none;
+}
+
+.read-more {
+  display: none;
+}
+
+.read-more-button {
+  padding: 10px 70px;
+  background-color: #ffb259;
+  border-radius: 10px;
+  content: "Read more";
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.read-more ~ .read-more-button::before {
+  content: "Read more";
+}
+
+.read-more:checked ~ .read-more-button::before {
+  content: "Read less";
+}
+
 footer {
   background-color: #f5f5f5;
-  color: #0270de;
+  color: #026dd8;
+  margin-top: 20px;
 }
 
 .footer-content {
@@ -196,13 +295,13 @@ footer li {
 
 footer a {
   text-decoration: none;
-  color: #0270de;
+  color: #026dd8;
   font-size: 0.7em;
   font-weight: 400;
 }
 
 .footer-copyright {
-  font-size: 0em;
+  font-size: 0.5em;
   font-weight: 300;
   text-align: center;
   margin-top: 10px;
@@ -211,13 +310,13 @@ footer a {
 /* Home page */
 
 .home-featured {
-  padding-top: 100px;
+  padding-top: 10px;
   max-width: 300px;
   margin: 0 auto;
 }
 
 .heading p {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 /* Exhibitions page */
@@ -226,53 +325,10 @@ footer a {
   margin: 0;
 }
 
-.popup-text {
-  text-align: left;
-  margin: 0 10px;
-}
-
-.popup-text h3 {
-  color: #0270de;
-  font-size: 0.9em;
-  margin-top: 8px;
-}
-
-.popup-text p {
-  font-size: 0.8em;
-  margin-bottom: 10px;
-}
-
-.popup-text .read-more {
-  display: none;
-}
-
-.read-more {
-  display: none;
-}
-
-.read-more-button {
-  padding: 10px 70px;
-  background-color: #ffb259;
-  border-radius: 10px;
-  content: "Read more";
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 1.1em;
-  margin-bottom: 0;
-}
-
 .featured-page__content {
   text-align: center;
   display: block;
   margin-bottom: 30px;
-}
-
-.popup {
-  max-height: 0px;
-  overflow: hidden;
-  margin: 10px 0 30px 0;
-  transition: 0.6s ease-in-out;
 }
 
 .cosmology-check:checked ~ .cosmology-box {
@@ -290,18 +346,6 @@ footer a {
 .biology-check:checked ~ .biology-box {
   max-height: 500px;
   border: 1px solid #ffb259;
-}
-
-.read-more ~ .read-more-button::before {
-  content: "Read more";
-}
-
-.read-more:checked ~ .read-more-button::before {
-  content: "Read less";
-}
-
-.featured-page-margin {
-  margin-top: 25px;
 }
 
 /* Events page */
@@ -327,34 +371,38 @@ footer a {
 
 /* About Us page */
 
-.about-paragraph {
-  margin-bottom: 30px;
-  border: 1px solid #ffb259;
+.featured-about {
+  padding: 10px;
 }
 
-.about-paragraph p {
-  margin: 10px;
-}
 /* Visit page */
 
 .visit-location {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 15px 0;
 }
 
 .logo-image {
   max-width: 140px;
-  margin-bottom: 20px;
 }
 
-.visit-address {
+.visit-location__content {
+  display: grid;
   color: #0270de;
 }
 
-.visit-address h4 {
-  margin: 0;
+.visit-location__content h3 {
+  margin: 5px 0 5px 0;
   font-size: 0.9em;
+}
+.visit-location__content h4 {
+  margin: 0 0 10px 0;
+  font-size: 0.8em;
+}
+
+.visit-transport p {
+  margin-bottom: 10px;
 }
 
 .opening {
@@ -368,34 +416,278 @@ footer a {
 }
 
 .visit-paragraph {
-  margin: 10px 0 30px 0;
+  margin-top: 10px;
+}
+
+.visit-paragraph p {
+  margin-bottom: 10px;
+}
+.visit-paragraph a {
+  color: #0270de;
 }
 
 /* Contact page */
 
+.contact-body {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.contact-content {
+  margin-top: 20px;
+}
+
 .contact-phone {
   font-size: 3em;
   color: #ffb259;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
 }
+
+.phone-icon {
+  cursor: pointer;
+}
+
 .contact-chat {
   font-size: 3em;
   color: #ffb259;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
+  justify-content: space-between;
+}
+
+.chat-icon {
+  cursor: pointer;
 }
 
 .phone-cta {
-  margin: auto 10px;
+  font-size: 0.2em;
+  margin: auto 0;
+  cursor: pointer;
 }
 
 .chat-cta {
-  margin: auto 10px;
+  font-size: 0.2em;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .contact-form {
   text-align: center;
+}
+
+.form-contact {
+  resize: none;
+}
+
+.contact-cta {
+  margin-top: 10px;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+.phone-popup {
+  border: 1px solid #ffb259;
+  text-align: center;
+  display: none;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.phone-popup h2 {
+  font-size: 0.3em;
+  margin-top: 10px;
+}
+
+.phone-popup p {
+  font-size: 0.3em;
+  font-weight: 300;
+}
+
+.phone-check:checked ~ .phone-popup {
+  display: block;
+}
+
+.phone-check {
+  display: none;
+}
+
+.phone-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.chat-popup {
+  border: 1px solid #ffb259;
+  text-align: center;
+  display: none;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.chat-popup h2 {
+  font-size: 0.3em;
+  margin-top: 10px;
+}
+
+.chat-popup p {
+  font-size: 0.3em;
+  font-weight: 300;
+}
+
+.chat-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.chat-field {
+  resize: none;
+  margin: 15px 0;
+}
+
+.chat-check {
+  display: none;
+}
+
+.chat-check:checked ~ .chat-popup {
+  display: block;
+}
+
+/* Media quieries */
+
+@media (min-width: 600px) {
+  .heading {
+    left: 40px;
+  }
+
+  main h1 {
+    font-size: 2em;
+  }
+
+  .heading p {
+    font-size: 1.45em;
+  }
+
+  .home-featured {
+    max-width: 360px;
+  }
+
+  .thumbnail-image {
+    max-width: 400px;
+  }
+
+  .featured-page h2 {
+    font-size: 1.7em;
+  }
+
+  .featured-page p {
+    font-size: 1.2em;
+  }
+
+  .search-box {
+    max-width: 350px;
+  }
+
+  footer h3 {
+    font-size: 1.2em;
+  }
+
+  footer h4 {
+    font-size: 1em;
+  }
+
+  footer p {
+    font-size: 0.9em;
+  }
+
+  .footer-links a {
+    font-size: 0.9em;
+  }
+
+  .footer-copyright {
+    font-size: 0.7em;
+  }
+}
+
+@media (min-width: 800px) {
+  .logo {
+    max-width: 250px;
+  }
+
+  .header {
+    display: flex;
+    height: 110px;
+  }
+
+  .search-box {
+    max-width: 400px;
+  }
+
+  .heading {
+    left: 50px;
+  }
+
+  main h1 {
+    font-size: 2.2em;
+  }
+
+  .heading p {
+    font-size: 1.6em;
+  }
+
+  .home-featured {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  .featured-page {
+    margin: 0 20px;
+    display: grid;
+    grid-template-rows: repeat(1fr, 1fr, 1fr);
+  }
+
+  .footer-copyright {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 960px) {
+  nav {
+    display: inline-block;
+    position: absolute;
+    top: 3.5%;
+    left: 25%;
+    font-size: 1.4em;
+  }
+
+  .navigation {
+    width: 100vw;
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    margin: 0;
+    border: none;
+  }
+
+  nav li {
+    display: block;
+    margin: 0 15px;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .fa-search {
+    top: 5%;
+    font-size: 1.5em;
+  }
+
+  .footer-copyright {
+    font-size: 0.9em;
+  }
 }
