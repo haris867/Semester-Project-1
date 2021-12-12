@@ -1,6 +1,16 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   background-color: #3599fd;
   height: 100px;
+}
+
+.logo-container {
+  display: inline-block;
 }
 
 .logo {
@@ -10,7 +20,8 @@
 
 nav {
   display: none;
-  position: relative;
+  position: absolute;
+  right: 0px;
   font-size: 1.2em;
   z-index: 2;
 }
@@ -52,7 +63,7 @@ nav a:hover {
 }
 
 .hamburger-checkbox:checked ~ nav {
-  display: block;
+  display: inline-block;
 }
 
 .active {
@@ -63,9 +74,11 @@ nav a:hover {
   color: #fff;
   font-size: 1.3em;
   position: absolute;
-  top: 40px;
+  top: 30px;
   right: 50px;
   cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
 }
 
 .search-box {
@@ -165,7 +178,7 @@ main img {
 .cta {
   text-transform: uppercase;
   text-decoration: none;
-  color: #4f4f4f;
+  color: #004e9d;
   font-size: 1.1em;
   font-weight: 400;
   background-color: #ffb259;
@@ -205,7 +218,6 @@ main img {
   overflow: hidden;
   margin: 10px 0 30px 0;
   transition: 0.6s ease-in-out;
-  margin-bottom: 20px;
 }
 
 .popup-text {
@@ -252,10 +264,33 @@ main img {
   content: "Read less";
 }
 
+.social-heading {
+  display: flex;
+  justify-content: center;
+  color: #037df5;
+}
+
+.social-icons {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  color: #ffb259;
+}
+
+.social-icons i {
+  cursor: pointer;
+}
+
+.social-icons a {
+  color: #ffb259;
+}
+
 footer {
   background-color: #f5f5f5;
   color: #026dd8;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .footer-content {
@@ -348,6 +383,10 @@ footer a {
   border: 1px solid #ffb259;
 }
 
+.cosmology-button {
+  margin-top: 15px;
+}
+
 /* Events page */
 
 .night-check:checked ~ .night-box {
@@ -371,7 +410,7 @@ footer a {
 
 /* About Us page */
 
-.featured-about {
+.about-featured {
   padding: 10px;
 }
 
@@ -392,6 +431,10 @@ footer a {
   color: #0270de;
 }
 
+.visit-location__content h2 {
+  margin-top: 0;
+}
+
 .visit-location__content h3 {
   margin: 5px 0 5px 0;
   font-size: 0.9em;
@@ -401,8 +444,14 @@ footer a {
   font-size: 0.8em;
 }
 
-.visit-transport p {
-  margin-bottom: 10px;
+.visit-transport {
+  padding-top: 0px;
+}
+
+.opening-section h3 {
+  margin: 0 0 10px 0;
+  font-size: 1em;
+  color: #0270de;
 }
 
 .opening {
@@ -413,6 +462,7 @@ footer a {
 
 .opening h4 {
   margin: 10px;
+  font-size: 1.1em;
 }
 
 .visit-paragraph {
@@ -427,11 +477,6 @@ footer a {
 }
 
 /* Contact page */
-
-.contact-body {
-  display: grid;
-  grid-template-rows: 1fr;
-}
 
 .contact-content {
   margin-top: 20px;
@@ -584,8 +629,45 @@ footer a {
     font-size: 1.2em;
   }
 
+  .visit-featured {
+    max-width: 400px;
+  }
+
+  .contact-featured {
+    max-width: 400px;
+  }
+
+  .contact-phone {
+    font-size: 4em;
+  }
+
+  .phone-popup {
+    width: 80%;
+  }
+
+  .contact-chat {
+    font-size: 4em;
+  }
+
+  .chat-popup {
+    width: 80%;
+  }
+
+  .form-contact {
+    width: 80%;
+  }
+
   .search-box {
     max-width: 350px;
+  }
+
+  .social-heading {
+    font-size: 1.2em;
+  }
+
+  .social-icons {
+    gap: 30px;
+    font-size: 3em;
   }
 
   footer h3 {
@@ -615,7 +697,6 @@ footer a {
   }
 
   .header {
-    display: flex;
     height: 110px;
   }
 
@@ -624,7 +705,7 @@ footer a {
   }
 
   .heading {
-    left: 50px;
+    left: 70px;
   }
 
   main h1 {
@@ -639,43 +720,116 @@ footer a {
     max-width: 800px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     padding: 0;
   }
 
-  .featured-page {
-    margin: 0 20px;
+  .featured {
+    max-width: 800px;
     display: grid;
-    grid-template-rows: repeat(1fr, 1fr, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  .about-featured {
+    display: block;
+    max-width: 450px;
+  }
+
+  .visit-main h1 {
+    margin-left: 0px;
+  }
+
+  .visit-featured {
+    max-width: 450px;
+    display: block;
+    margin: 40px auto 20px auto;
+  }
+
+  .contact-featured {
+    max-width: 450px;
+    display: block;
+  }
+
+  .phone-popup {
+    width: 100%;
+  }
+
+  .chat-popup {
+    width: 100%;
+  }
+
+  .form-contact {
+    width: 100%;
+  }
+
+  .address {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .opening-section {
+    position: fixed;
+    right: 1%;
+    top: 24%;
+  }
+
+  .opening-section h3 {
+    font-size: 1.2em;
+  }
+
+  .opening h4 {
+    font-size: 1.3em;
+  }
+
+  .featured-page {
+    margin: 20px 20px 0 20px;
+    display: inline-block;
+    min-width: 300px;
   }
 
   .footer-copyright {
     font-size: 0.8em;
   }
-}
 
-@media (min-width: 960px) {
+  .cosmology-box {
+    margin: 10px 0 38px 0;
+  }
+
+  .nav a {
+    padding: 0px;
+    margin: 0;
+  }
+
   nav {
     display: inline-block;
     position: absolute;
-    top: 3.5%;
-    left: 25%;
+    top: 4%;
+    left: 35%;
     font-size: 1.4em;
+    right: 10%;
   }
 
   .navigation {
-    width: 100vw;
+    width: 80vw;
     text-align: center;
+    margin: 0 auto;
   }
 
   nav ul {
     display: flex;
-    margin: 0;
+    margin: 10px 0 0 0;
     border: none;
+    flex-grow: inherit;
+    justify-content: space-evenly;
+    gap: 1px;
   }
 
   nav li {
     display: block;
-    margin: 0 15px;
+    margin: 0 3px;
   }
 
   .hamburger-icon {
@@ -683,11 +837,43 @@ footer a {
   }
 
   .fa-search {
-    top: 5%;
+    right: 10px;
     font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .social-heading {
+    font-size: 1.4em;
+  }
+
+  .social-icons {
+    gap: 40px;
+  }
+
+  .social-icons h3 {
+    font-size: 0.5em;
   }
 
   .footer-copyright {
     font-size: 0.9em;
+  }
+}
+
+@media (min-width: 960px) {
+  nav {
+    left: 30%;
+  }
+
+  .nav li {
+    margin: 0 10px;
+  }
+
+  .opening-section {
+    right: 10%;
+  }
+
+  .visit-main h1 {
+    margin-left: 100px;
+    font-size: 2.4em;
   }
 }
