@@ -810,7 +810,7 @@ footer a {
   nav {
     display: inline-block;
     position: absolute;
-    top: 4%;
+    top: 35px;
     left: 35%;
     font-size: 1.4em;
     right: 10%;
@@ -826,7 +826,6 @@ footer a {
     display: flex;
     margin: 10px 0 0 0;
     border: none;
-    flex-grow: inherit;
     justify-content: space-evenly;
     gap: 1px;
   }
