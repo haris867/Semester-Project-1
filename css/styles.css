@@ -428,7 +428,7 @@ footer a {
 
 .visit-location__content {
   display: grid;
-  color: #0270de;
+  color: #037df5;
 }
 
 .visit-location__content h2 {
@@ -451,13 +451,13 @@ footer a {
 .opening-section h3 {
   margin: 0 0 10px 0;
   font-size: 1em;
-  color: #0270de;
+  color: #037df5;
 }
 
 .opening {
   display: flex;
   border: 1px solid #ffb259;
-  color: #0270de;
+  color: #037df5;
 }
 
 .opening h4 {
