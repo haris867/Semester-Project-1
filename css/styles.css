@@ -777,7 +777,7 @@ footer a {
   .opening-section {
     position: fixed;
     right: 1%;
-    top: 24%;
+    top: 30%;
   }
 
   .opening-section h3 {
@@ -884,5 +884,8 @@ footer a {
 
   .fa-search {
     right: 50px;
+  }
+
+  .visit-featured {
   }
 }
