@@ -704,104 +704,6 @@ footer a {
     height: 110px;
   }
 
-  .search-box {
-    max-width: 400px;
-  }
-
-  .heading {
-    left: 70px;
-  }
-
-  main h1 {
-    font-size: 2.2em;
-  }
-
-  .heading p {
-    font-size: 1.6em;
-  }
-
-  .home-featured {
-    max-width: 800px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    padding: 0;
-  }
-
-  .featured {
-    max-width: 800px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0;
-  }
-
-  .about-featured {
-    display: block;
-    max-width: 450px;
-  }
-
-  .visit-main h1 {
-    margin-left: 0px;
-  }
-
-  .visit-featured {
-    max-width: 450px;
-    display: block;
-    margin: 40px auto 20px auto;
-  }
-
-  .contact-featured {
-    max-width: 450px;
-    display: block;
-  }
-
-  .phone-popup {
-    width: 100%;
-  }
-
-  .chat-popup {
-    width: 100%;
-  }
-
-  .form-contact {
-    width: 100%;
-  }
-
-  .address {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .opening-section {
-    position: fixed;
-    right: 1%;
-    top: 215px;
-  }
-
-  .opening-section h3 {
-    font-size: 1.2em;
-  }
-
-  .opening h4 {
-    font-size: 1.3em;
-  }
-
-  .featured-page {
-    margin: 20px 20px 0 20px;
-    display: inline-block;
-    min-width: 300px;
-  }
-
-  .footer-copyright {
-    font-size: 0.8em;
-  }
-
-  .cosmology-box {
-    margin: 10px 0 38px 0;
-  }
-
   .nav a {
     padding: 0px;
     margin: 0;
@@ -860,6 +762,104 @@ footer a {
 
   .footer-copyright {
     font-size: 0.9em;
+  }
+
+  .search-box {
+    max-width: 400px;
+  }
+
+  .heading {
+    left: 70px;
+  }
+
+  main h1 {
+    font-size: 2.2em;
+  }
+
+  .heading p {
+    font-size: 1.6em;
+  }
+
+  .home-featured {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  .featured {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  .about-featured {
+    display: block;
+    max-width: 450px;
+  }
+
+  .visit-main h1 {
+    margin-left: 0px;
+  }
+
+  .visit-featured {
+    max-width: 450px;
+    display: block;
+    margin: 40px auto 20px auto;
+  }
+
+  .contact-featured {
+    max-width: 450px;
+    display: block;
+  }
+
+  .contact-image {
+    max-width: 450px;
+  }
+
+  .phone-popup {
+    width: 100%;
+  }
+
+  .chat-popup {
+    width: 100%;
+  }
+
+  .form-contact {
+    width: 100%;
+  }
+
+  .address {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .opening-section {
+    position: fixed;
+    right: 1%;
+    top: 215px;
+  }
+
+  .opening-section h3 {
+    font-size: 1.2em;
+  }
+
+  .opening h4 {
+    font-size: 1.3em;
+  }
+
+  .featured-page {
+    margin: 20px 20px 0 20px;
+    display: inline-block;
+    min-width: 300px;
+  }
+
+  .cosmology-box {
+    margin: 10px 0 38px 0;
   }
 }
 
