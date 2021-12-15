@@ -704,6 +704,10 @@ footer a {
     height: 110px;
   }
 
+  nav ul {
+    margin-top: -11px;
+  }
+
   .social-heading {
     font-size: 1.4em;
   }
