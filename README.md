@@ -12,7 +12,6 @@ It's a static website designed by me, which is also responsive and WCAG-complian
 I was tasked with creating a website for a local science museum aimed at inspiring children to become the next generation of scientists.
 
 
-Contact
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+## Contact
 
-My E-mail: haris.usman@hotmail.com
+My email: haris.usman@hotmail.com
